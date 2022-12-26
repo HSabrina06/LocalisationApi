@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imagename = "localisation.jar"
+    imagename = "localisation"
     registryCredential = 'hsabrina-dockerhub'
     dockerImage = ''
   }

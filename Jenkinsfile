@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/HSabrina06/LocalisationApi.git', branch: 'main', credentialsId: 'HSabrina06-github-user-token'])
+        git([url: 'https://github.com/HSabrina06/LocalisationApi.git', branch: 'main', credentialsId: ''])
 
       }
     }

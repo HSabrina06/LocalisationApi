@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imagename = "hsabrina/saaserp_test"
+    imagename = "localisation.jar"
     registryCredential = 'hsabrina-dockerhub'
     dockerImage = ''
   }
@@ -16,6 +16,7 @@ pipeline {
       steps{
         script {
           dockerImage = docker.build imagename
+       //   	sh 'docker build -t shanem/localisation-0.0.1-SNAPSHOT:latest .'
         }
       }
     }

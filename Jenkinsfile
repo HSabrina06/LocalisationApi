@@ -26,11 +26,11 @@ pipeline {
          docker.withRegistry( '', registryCredential ) {
        //withDockerRegistry([ credentialsId: registryCredential, url: "" ]) {
 
-               dockerImage.push()
 
 
-       //    dockerImage.push("$BUILD_NUMBER")
-          // dockerImage.push('latest')
+
+         dockerImage.push("$BUILD_NUMBER")
+        dockerImage.push('latest')
 
 
           }

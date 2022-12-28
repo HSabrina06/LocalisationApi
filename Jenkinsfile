@@ -25,8 +25,10 @@ pipeline {
         script {
        //   docker.withRegistry( 'https://hub.docker.com/', registryCredential ) {
        withDockerRegistry([ credentialsId: "dockerhubaccount", url: "" ]) {
+
                dockerImage.push()
-               }
+
+
        //    dockerImage.push("$BUILD_NUMBER")
           // dockerImage.push('latest')
 

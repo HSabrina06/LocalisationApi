@@ -1,7 +1,7 @@
 pipeline {
   environment {
     imagename = "localisation.jar"
-    registryCredential = 'dockerHub'
+    registryCredential = 'docker-hub-credentials'
     dockerImage = ''
   }
   agent any

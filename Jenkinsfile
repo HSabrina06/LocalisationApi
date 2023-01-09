@@ -1,7 +1,7 @@
 pipeline {
   environment {
     imagename = "localisation.jar"
-    registryCredential = 'dockerHub'
+    registryCredential = 'docker-hub-credentials'
     dockerImage = ''
   }
   agent any
@@ -16,7 +16,6 @@ pipeline {
       steps{
         script {
           dockerImage = docker.build imagename
-       //   	sh 'docker build -t shanem/localisation-0.0.1-SNAPSHOT:latest .'
         }
       }
     }
@@ -24,14 +23,8 @@ pipeline {
       steps{
         script {
          docker.withRegistry( '', registryCredential ) {
-       //withDockerRegistry([ credentialsId: registryCredential, url: "" ]) {
-
-
-
-
-         dockerImage.push("$BUILD_NUMBER")
-        dockerImage.push('latest')
-
+            dockerImage.push("$BUILD_NUMBER")
+            dockerImage.push('latest')
 
           }
         }

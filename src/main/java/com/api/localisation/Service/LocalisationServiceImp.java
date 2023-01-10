@@ -17,10 +17,9 @@ import java.util.List;
 
 @Service
 @Transactional
-public class LocalisationServiceImp implements LocalisationService{
-
-    @Autowired
-    private LocalisationDao localisationDao;
+public class LocalisationServiceImp implements LocalisationService {
+@Autowired
+    LocalisationDao localisationDao;
 
     private final Logger log = LoggerFactory.getLogger(LocalisationServiceImp.class);
 

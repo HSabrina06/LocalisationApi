@@ -12,14 +12,14 @@ pipeline {
 
       }
     }
-    stage('Building and push image') {
+    stage('Building  image') {
       steps{
         script {
           dockerImage = docker.build imagename
         }
       }
     }
-    stage('Deploy Image') {
+    stage('Deploy and push Image') {
       steps{
         script {
          docker.withRegistry( '', registryCredential ) {

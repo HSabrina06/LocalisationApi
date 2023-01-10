@@ -12,7 +12,7 @@ pipeline {
 
       }
     }
-    stage('Building image') {
+    stage('Building and push image') {
       steps{
         script {
           dockerImage = docker.build imagename
